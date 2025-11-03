@@ -1,16 +1,69 @@
-# React + Vite
+🌌 Starship Viewer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that fetches and displays data from the Star Wars API (SWAPI).
+Users can view a list of starships, search by name, and switch between multiple visual themes.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fetch Starship Data — retrieves starships from SWAPI
 
-## React Compiler
+Search Functionality — instantly filter starships by name
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Responsive Design — optimized for desktop, tablet, and mobile
 
-## Expanding the ESLint configuration
+Loading & Error Handling — user-friendly feedback during API calls
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Theme Switcher — change between DaisyUI themes with local storage memory
+
+Modern UI — clean layout built with Tailwind CSS & DaisyUI
+
+🧩 Tech Stack
+
+React (Vite) — Frontend framework
+
+Zustand — Lightweight state management
+
+Tailwind CSS — Utility-first styling
+
+DaisyUI — Pre-styled components and themes
+
+Lucide Icons — SVG icon set
+
+🛠️ How It Works
+
+On app load, starship data is fetched from the Star Wars API.
+
+Data is stored in a global Zustand store for efficient state handling.
+
+The search bar filters the displayed starships in real time.
+
+Users can toggle between multiple UI themes using the theme dropdown.
+
+💻 Running the Project Locally
+
+Clone or download this repository
+
+Install dependencies:
+
+npm install
+
+
+Run the development server:
+
+npm run dev
+
+
+Open your browser at the URL shown in your terminal (usually http://localhost:5173/)
+
+
+⚙️ Folder Structure
+src/
+ ├── components/
+ │   ├── LoadingSpinner.jsx
+ │   ├── SearchBar.jsx
+ │   ├── StarshipCard.jsx
+ │   └── Theme.jsx
+ ├── store/
+ │   └── useStarshipStore.js
+ ├── App.jsx
+ └── main.jsx
